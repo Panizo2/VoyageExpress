@@ -61,14 +61,50 @@ header nav ul li:hover {
   transition: .4s;
 }
 
+nav ul li a {
+  position: relative;
+  color: #ffff;
+  text-decoration: none;
+}
+
+nav ul li a::before,
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: #f56c11;
+  transition: all 0.2s ease-in-out;
+}
+
+nav ul li a::before {
+  transform: translateX(-50%);
+}
+
+nav ul li a::after {
+  transform: translateX(50%);
+}
+
+nav ul li a:hover::before,
+nav ul li a:hover::after {
+  width: 50%;
+}
+
+
 
 .header-content {
   color: #fff;
   font-weight: bold;
   max-width: 400px;
   margin: 150px auto;
+  margin-top: 40px;
   text-align: center;
   animation: ease text-move 2s forwards;
+  background: rgba(0, 0, 0, 0.753);
+  padding: 10px;
+  border-radius: 20px;
 }
 
 
