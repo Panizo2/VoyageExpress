@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VoyageExpress</title>
-  <script src="https://unpkg.com/feather-icons"></script>
   <link rel="stylesheet" href="CSS/style.css">
   <link rel="icon" type="image/png" href="img/logo.png"/>
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  
 </head>
 
 <body>
@@ -22,12 +22,21 @@
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
-
-    <div  id="home" class="header-content">
-      <h1>Veneza</h1>
-      <p>Conheça Veneza, e viva aventuras extraodinarias, o embarque está proximo, junte-se a nós nessa experiência</p>
-      <a href="veneza.html"><button>Saiba mais</button></a>        
+    
+    <div class="carrossel">
+      <div class="carousel-container">
+        <div class="carousel-image" style="background-image: url('img/back.jpg');"></div>
+        <div class="carousel-image" style="background-image: url('img/Piazza.jpg');"></div>
+        <div class="carousel-image" style="background-image: url('img/Dalvo.jpg');"></div>
+      </div>
+      <div id="home" class="header-content">
+        <h1>Veneza</h1>
+        <p>Conheça Veneza, e viva aventuras extraodinarias, o embarque está proximo, junte-se a nós nessa experiência</p>
+        <a href="veneza.html"><button>Saiba mais</button></a>        
+      </div>
     </div>
+    
+    
   </header>
 
   <section id="pacotes" class="pacotes">
@@ -230,6 +239,27 @@
     }
   </script>
 
+<script>
+  var carouselImages = document.querySelectorAll('.carousel-image');
+  carouselImages[0].classList.add('active');
+  </script>
+
+<script>
+  var currentIndex = 0;
+  var maxIndex = carouselImages.length - 1;
+  setInterval(function() {
+    carouselImages[currentIndex].classList.remove('active');
+    currentIndex++;
+    if (currentIndex > maxIndex) {
+      currentIndex = 0;
+    }
+    carouselImages[currentIndex].classList.add('active');
+  }, 3000);
+  </script>
+
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap">
   </script>
 </body>

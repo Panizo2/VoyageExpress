@@ -21,11 +21,36 @@ a {
   color: inherit;
 }
 
-header {
+/*header {
   height: calc(100vh - 150px);
   background: no-repeat center/cover url('../img/back.jpg');
-}
+}*/
 
+.carrossel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.carousel-image.active {
+  opacity: 1;
+}
 
 header nav {
   display: flex;
@@ -98,13 +123,16 @@ nav ul li a:hover::after {
   color: #fff;
   font-weight: bold;
   max-width: 400px;
-  margin: 150px auto;
-  margin-top: 40px;
+  /* margin: 150px auto;
+  margin-top: 40px; */
   text-align: center;
   animation: ease text-move 2s forwards;
   background: rgba(0, 0, 0, 0.753);
   padding: 10px;
   border-radius: 20px;
+  position: absolute;
+  /* top: 50px;
+  left: 50px; */
 }
 
 
