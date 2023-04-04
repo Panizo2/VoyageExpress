@@ -52,23 +52,3 @@ video {
 
   
 }
-
-.carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  box-shadow: 0 -10px 10px rgba(0, 0, 0, 0.5);
-  color: #fff;
-}
-
-.display-4{
-  margin-bottom: 24px;
-  text-align: center;
-}
-
-.AgencyNamePicture{
-  margin-top: -15px;
-  margin-bottom: -10px;
-}
