@@ -52,3 +52,19 @@ video {
 
   
 }
+.video-container {
+  position: relative;
+  width: 820px; /* largura desejada */
+  height: 470px; /* altura desejada */
+  margin: 0 auto; /* centralizar horizontalmente */
+  border-radius: 10px; /* borda arredondada */
+  overflow: hidden; /* para ocultar os cantos afiados do iframe */
+}
+
+#youtube-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
